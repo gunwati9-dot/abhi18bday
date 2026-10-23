@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ABHINAV RAIN // LEVEL 18 — HAPPY BIRTHDAY</title>
+  <meta name="description" content="Futuristic 18th Birthday Celebration for Abhinav Rain. Born October 24, 2008. Seedhe Maut / Desi Hip-Hop Aesthetics, Brother's Message, JEE Hype & Photo Vault.">
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- Favicon / Tab Emoji -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+</head>
+<body>
+
+  <!-- BACKGROUND CANVASES & OVERLAYS -->
+  <canvas id="bgCanvas"></canvas>
+  <canvas id="confettiCanvas"></canvas>
+  <div class="cyber-grid-overlay"></div>
+  <div class="scanline-overlay"></div>
+
+  <!-- AUDIO ELEMENT (Hola Amigo - Seedhe Maut ft. KR$NA) -->
+  <audio id="bgAudio" loop preload="auto">
+    <source src="hola-amigo.mp3" type="audio/mpeg">
+    <source src="hola-amigo.ogg" type="audio/ogg">
+  </audio>
+
+  <!-- SEEDHE MAUT / DHH MARQUEE TICKER -->
+  <div class="dhh-ticker">
+    <div class="ticker-track">
+      <div class="ticker-item"><span class="icon">☠</span> <span>TERA BHAI SEEDHE MAUT</span></div>
+      <div class="ticker-item"><span class="icon">⚡</span> <span>ABHINAV RAIN // LEVEL 18 UNLOCKED</span></div>
+      <div class="ticker-item"><span class="icon">🔥</span> <span>नयाब · 24.10.2008 TO 24.10.2026</span></div>
+      <div class="ticker-item"><span class="icon">🎯</span> <span>MISSION: JEE TOP RANK CRACK</span></div>
+      <div class="ticker-item"><span class="icon">💿</span> <span>HOLA AMIGO ON REPEAT</span></div>
+      <div class="ticker-item"><span class="icon">👑</span> <span>SHAILESH X ABHINAV // BROTHERHOOD FOREVER</span></div>
+      
+      <!-- Duplicate for seamless infinite loop -->
+      <div class="ticker-item"><span class="icon">☠</span> <span>TERA BHAI SEEDHE MAUT</span></div>
+      <div class="ticker-item"><span class="icon">⚡</span> <span>ABHINAV RAIN // LEVEL 18 UNLOCKED</span></div>
+      <div class="ticker-item"><span class="icon">🔥</span> <span>नयाब · 24.10.2008 TO 24.10.2026</span></div>
+      <div class="ticker-item"><span class="icon">🎯</span> <span>MISSION: JEE TOP RANK CRACK</span></div>
+      <div class="ticker-item"><span class="icon">💿</span> <span>HOLA AMIGO ON REPEAT</span></div>
+      <div class="ticker-item"><span class="icon">👑</span> <span>SHAILESH X ABHINAV // BROTHERHOOD FOREVER</span></div>
+    </div>
+  </div>
+
+  <!-- STICKY NAVIGATION HUD -->
+  <nav class="cyber-nav">
+    <div class="container nav-container">
+      <a href="#hero" class="nav-brand">
+        <span class="brand-badge">SM</span>
+        <span class="brand-text">ABHINAV <span>// 18</span></span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#hero" class="nav-link active">Home</a></li>
+        <li><a href="#audio-deck" class="nav-link">Audio Deck</a></li>
+        <li><a href="#transmission" class="nav-link">Brother's Message</a></li>
+        <li><a href="#jee-hype" class="nav-link">JEE Hype</a></li>
+        <li><a href="#vault" class="nav-link">Photo Vault</a></li>
+        <li><a href="#game" class="nav-link">Nayaab Mini-Game</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="cyber-btn cyber-btn-crimson cyber-btn-sm" id="heroConfettiBtn">
+          <span>🎉 Celebrate</span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ==========================================================================
+       SECTION 1: HERO SECTION
+       ========================================================================== -->
+  <header class="hero-section" id="hero">
+    <div class="container">
+      <div class="hero-grid">
+        
+        <!-- Left: Headline & Live Age -->
+        <div class="hero-content">
+          <div class="hero-meta-bar">
+            <span class="cyber-badge"><span class="status-dot"></span> SYSTEM ONLINE</span>
+            <span class="cyber-badge crimson">OCTOBER 24, 2008 // OFFICIALLY 18</span>
+            <span class="cyber-badge gold">CLASS: JEE WARRIOR</span>
+          </div>
+
+          <div class="hero-title-wrap">
+            <span class="hero-subtag">// INITIALIZE ADULTHOOD PROTOCOL</span>
+            <h1 class="hero-headline glitch-text auto-glitch" data-text="LEVEL 18 UNLOCKED: HAPPY BIRTHDAY, ABHINAV!">
+              Level 18 Unlocked: Happy Birthday, Abhinav!
+            </h1>
+            <span class="hero-name">ABHINAV RAIN</span>
+            
+            <div class="hero-level-badge">
+              <span class="num">18</span>
+              <span class="label">YEARS OF UNMATCHED DRIP & BROTHERHOOD</span>
+            </div>
+          </div>
+
+          <p class="hero-desc">
+            Welcome to the official 18th anniversary cyberspace for <strong>Abhinav Rain</strong>. Powered by the raw energy of <strong>Seedhe Maut</strong>, an encrypted brotherhood transmission from <strong>Shailesh</strong>, and full overdrive hype to crush JEE with an AIR top rank!
+          </p>
+
+          <!-- Live Age Ticker -->
+          <div class="live-age-card cyber-card">
+            <div class="hud-corner hud-tl"></div>
+            <div class="hud-corner hud-tr"></div>
+            <div class="hud-corner hud-bl"></div>
+            <div class="hud-corner hud-br"></div>
+            
+            <div class="age-card-header">
+              <span>CHRONOLOGICAL TELEMETRY</span>
+              <span>BASE: 24.10.2008</span>
+            </div>
+
+            <div class="age-ticker-grid">
+              <div class="age-box">
+                <span class="val" id="tickerYears">18</span>
+                <span class="lbl">Years</span>
+              </div>
+              <div class="age-box">
+                <span class="val" id="tickerDays">00</span>
+                <span class="lbl">Days</span>
+              </div>
+              <div class="age-box">
+                <span class="val" id="tickerHours">00</span>
+                <span class="lbl">Hours</span>
+              </div>
+              <div class="age-box">
+                <span class="val" id="tickerMins">00</span>
+                <span class="lbl">Mins</span>
+              </div>
+              <div class="age-box">
+                <span class="val" id="tickerSecs">00</span>
+                <span class="lbl">Secs</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero Action Buttons -->
+          <div class="hero-actions">
+            <a href="#transmission" class="cyber-btn cyber-btn-purple">
+              <span>📩 Brother's Message</span>
+            </a>
+            <a href="#jee-hype" class="cyber-btn cyber-btn-crimson">
+              <span>⚡ JEE Overdrive</span>
+            </a>
+            <a href="#vault" class="cyber-btn">
+              <span>📸 Explore Vault (15 Photos)</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right: Prominent Hologram Photo Showcase -->
+        <div class="hero-visual">
+          <div class="hologram-frame" id="heroHoloFrame">
+            <!-- Laser scanline effect -->
+            <div class="holo-scanline"></div>
+            
+            <!-- Floating HUD status pills -->
+            <div class="hud-stat-pill pill-left">
+              <span>HP: 100/100 // XP: LEVEL 18</span>
+            </div>
+            <div class="hud-stat-pill pill-right">
+              <span>BUFF: BROTHERHOOD 100%</span>
+            </div>
+
+            <!-- Rotating photo image -->
+            <img src="photo1.jpg" alt="Abhinav Rain" id="heroHoloImg" class="holo-photo">
+
+            <!-- Switcher Dots -->
+            <div class="holo-switcher">
+              <button class="holo-dot active" data-index="0" title="Photo 1"></button>
+              <button class="holo-dot" data-index="1" title="Photo 2"></button>
+              <button class="holo-dot" data-index="2" title="Photo 3"></button>
+              <button class="holo-dot" data-index="3" title="Photo 4"></button>
+              <button class="holo-dot" data-index="4" title="Photo 5"></button>
+            </div>
+
+            <!-- Overlay Details -->
+            <div class="holo-overlay-info">
+              <div class="holo-tag-row">
+                <span class="holo-tag" id="heroHoloTag">[MEM_01 // BABY_MODE]</span>
+                <span class="cyber-badge sm">2008 — 2026</span>
+              </div>
+              <div class="holo-caption" id="heroHoloCaption">The Legend — Baby Mode</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       SECTION 2: AUDIO / MUSIC PLAYER SECTION
+       ========================================================================== -->
+  <section class="music-deck-section" id="audio-deck">
+    <div class="container">
+      <div class="music-deck-card cyber-card">
+        <div class="hud-corner hud-tl"></div>
+        <div class="hud-corner hud-tr"></div>
+        <div class="hud-corner hud-bl"></div>
+        <div class="hud-corner hud-br"></div>
+
+        <div class="deck-header">
+          <div class="deck-status-wrap">
+            <span class="status-dot"></span>
+            <span class="deck-title">CYBER AUDIO DECK // SEEDHE MAUT FREQUENCY</span>
+          </div>
+          <span class="cyber-badge" id="deckStatus">STANDBY // READY</span>
+        </div>
+
+        <div class="deck-body">
+          <!-- Left: Track Cover & Meta -->
+          <div class="track-info-box">
+            <div class="track-art">
+              <span class="art-icon">SM</span>
+            </div>
+            <div class="track-meta">
+              <div class="track-song-title">Hola Amigo</div>
+              <div class="track-artist">KR$NA ft. Seedhe Maut</div>
+              <div class="track-sub">Desi Hip-Hop // Kalamkaar / Azadi</div>
+            </div>
+          </div>
+
+          <!-- Middle: Canvas Waveform Visualizer -->
+          <div class="visualizer-container">
+            <canvas id="waveformCanvas" class="waveform-canvas"></canvas>
+            <div class="track-progress-bar-wrap" id="trackProgressWrap" title="Click to Seek Track">
+              <div class="track-progress-bar-fill" id="trackProgressFill"></div>
+            </div>
+            <div class="track-progress-row">
+              <span id="trackTimeCurrent">0:00</span>
+              <span>DYNAMIC FREQUENCY VISUALIZER</span>
+              <span id="trackTimeDuration">--:--</span>
+            </div>
+          </div>
+
+          <!-- Right: Audio Controls -->
+          <div class="player-controls-wrap">
+            <div class="deck-btn-group">
+              <button class="ctrl-btn" id="muteBtn" title="Mute/Unmute">
+                <span id="muteIcon">🔊</span>
+              </button>
+              <button class="ctrl-btn play-btn" id="playPauseBtn" title="Play Track">
+                <span id="playIcon">▶</span>
+              </button>
+            </div>
+
+            <div class="volume-row">
+              <span>VOL</span>
+              <input type="range" min="0" max="1" step="0.05" value="0.8" class="cyber-range" id="volumeSlider">
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick Streaming Links -->
+        <div class="stream-links-row">
+          <span style="font-family:var(--font-mono); font-size:0.75rem; color:var(--text-dim); display:flex; align-items:center;">DIRECT ACCESS:</span>
+          <a href="https://open.spotify.com/track/19pHSvXUwErAXFktkvYMk9" target="_blank" rel="noopener noreferrer" class="stream-badge spotify">
+            <span>🟢 Spotify Track</span>
+          </a>
+          <a href="https://www.youtube.com/watch?v=De9VIp37CjY" target="_blank" rel="noopener noreferrer" class="stream-badge youtube">
+            <span>🔴 Official Music Video</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 3: BROTHER'S TRANSMISSION MESSAGE (The Core)
+       ========================================================================== -->
+  <section class="transmission-section" id="transmission">
+    <div class="container">
+      <div style="text-align: center; max-width: 800px; margin: 0 auto 30px;">
+        <span class="section-eyebrow">// ENCRYPTED BROTHERHOOD PROTOCOL</span>
+        <h2 class="section-title">MESSAGE FROM <span class="accent">BIG BROTHER SHAILESH</span></h2>
+      </div>
+
+      <div class="transmission-card cyber-card">
+        <div class="hud-corner hud-tl"></div>
+        <div class="hud-corner hud-tr"></div>
+        <div class="hud-corner hud-bl"></div>
+        <div class="hud-corner hud-br"></div>
+
+        <!-- Header -->
+        <div class="transmission-header">
+          <div class="sender-info">
+            <div class="sender-avatar">S</div>
+            <div class="sender-details">
+              <div class="sender-name">Shailesh Rain</div>
+              <div class="sender-rel">// Older Brother · The Unconditional Ally</div>
+            </div>
+          </div>
+
+          <div class="transmission-actions">
+            <button class="cyber-btn cyber-btn-sm" id="retypeBtn" title="Replay Typewriter Effect">
+              <span>🔄 Retransmit</span>
+            </button>
+            <button class="cyber-btn cyber-btn-purple cyber-btn-sm" id="voiceReadoutBtn" title="Read Out Loud">
+              <span>🔊 Voice Readout</span>
+            </button>
+            <button class="cyber-btn cyber-btn-crimson cyber-btn-sm" id="copyMessageBtn" title="Copy to Clipboard">
+              <span>📋 Copy Message</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Message Body -->
+        <div class="message-quote-container">
+          <div class="quote-glyph">“</div>
+          <p class="transmission-message" id="transmissionMessageText">
+            Happy 18th Birthday, Abhinav! You truly are the best brother I could have ever asked for in this world. I know we fight and argue a lot, and half the time we don’t even talk properly—we just stay annoyed at each other. But no matter how much we fight or how angry I get, you will always be the most important person in my life. You’re officially turning 18 now, and your JEE exam is around the corner. I have full faith that you will crack it with a top rank and make us all proud. Just give it your absolute best. You’ll always be the best brother to me. — From your brother, Shailesh
+          </p>
+        </div>
+
+        <!-- Transmission Footer -->
+        <div class="transmission-footer">
+          <div>
+            <div class="sig-block">— From your brother, Shailesh</div>
+            <div class="sig-sub">Bhai-Bhai Bond · Unbreakable · TBS4L</div>
+          </div>
+
+          <div style="display:flex; gap:10px; align-items:center;">
+            <span class="cyber-badge gold">PRIORITY: MAXIMUM</span>
+            <span class="cyber-badge crimson">SECURE LINK VERIFIED</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 4: JEE MOTIVATION & HYPE CARD
+       ========================================================================== -->
+  <section class="jee-section" id="jee-hype">
+    <div class="container">
+      <div class="jee-banner cyber-card">
+        <div class="hud-corner hud-tl"></div>
+        <div class="hud-corner hud-tr"></div>
+        <div class="hud-corner hud-bl"></div>
+        <div class="hud-corner hud-br"></div>
+
+        <div class="jee-grid">
+          
+          <!-- Left: Tactical readiness & Description -->
+          <div class="jee-info">
+            <span class="cyber-badge crimson" style="margin-bottom:14px;">TARGET: JEE 2027 AIR 1 PROTOCOL</span>
+            <h2 class="jee-title">CRACK JEE WITH <span class="fire">TOP RANK</span></h2>
+            
+            <p class="jee-desc">
+              Level 18 marks the moment of destiny. Your JEE exam is right around the corner, and the entire family—especially your brother Shailesh—has 100% faith that you will demolish this exam with a stellar rank. Harness that Seedhe Maut relentless grind. You got this, Abhinav!
+            </p>
+
+            <div class="jee-stats-list">
+              <div class="stat-row">
+                <div class="stat-meta">
+                  <span class="stat-label">Physics Formula Overclock</span>
+                  <span class="stat-val">99% READY</span>
+                </div>
+                <div class="stat-bar-track">
+                  <div class="stat-bar-fill cyan" style="width: 99%"></div>
+                </div>
+              </div>
+
+              <div class="stat-row">
+                <div class="stat-meta">
+                  <span class="stat-label">Chemistry Synthesis Mastery</span>
+                  <span class="stat-val">98% READY</span>
+                </div>
+                <div class="stat-bar-track">
+                  <div class="stat-bar-fill purple" style="width: 98%"></div>
+                </div>
+              </div>
+
+              <div class="stat-row">
+                <div class="stat-meta">
+                  <span class="stat-label">Mathematics Calculus Dominance</span>
+                  <span class="stat-val">100% READY</span>
+                </div>
+                <div class="stat-bar-track">
+                  <div class="stat-bar-fill crimson" style="width: 100%"></div>
+                </div>
+              </div>
+
+              <div class="stat-row">
+                <div class="stat-meta">
+                  <span class="stat-label">Mindset: Seedhe Maut (TBS4L)</span>
+                  <span class="stat-val">UNSTOPPABLE</span>
+                </div>
+                <div class="stat-bar-track">
+                  <div class="stat-bar-fill crimson" style="width: 100%"></div>
+                </div>
+              </div>
+            </div>
+
+            <button class="cyber-btn cyber-btn-crimson" id="overdriveBtn">
+              <span>⚡ Ignite JEE Overdrive</span>
+            </button>
+          </div>
+
+          <!-- Right: Live Target Countdown & Hype Quote -->
+          <div class="jee-countdown-card cyber-card">
+            <div class="countdown-title">T-MINUS UNTIL JEE TARGET DATE</div>
+            
+            <div class="countdown-digits">
+              <div class="countdown-unit">
+                <div class="number" id="jeeDays">92</div>
+                <span class="label">Days</span>
+              </div>
+              <div class="countdown-unit">
+                <div class="number" id="jeeHours">09</div>
+                <span class="label">Hours</span>
+              </div>
+              <div class="countdown-unit">
+                <div class="number" id="jeeMins">45</div>
+                <span class="label">Mins</span>
+              </div>
+              <div class="countdown-unit">
+                <div class="number" id="jeeSecs">18</div>
+                <span class="label">Secs</span>
+              </div>
+            </div>
+
+            <div class="hype-quote-display">
+              <span id="hypeQuoteText">“Khoon mein daudti hai zidd! Abhinav, AIR 1 is within your strike range!”</span>
+            </div>
+
+            <div style="font-family:var(--font-mono); font-size:0.75rem; color:var(--text-dim); text-transform:uppercase;">
+              STATUS: ZERO EXCUSES · 100% FOCUS
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 5: INTERACTIVE PHOTO GALLERY (The 15 Photo Vault)
+       ========================================================================== -->
+  <section class="gallery-section" id="vault">
+    <div class="container">
+      
+      <div style="text-align: center; max-width: 800px; margin: 0 auto 30px;">
+        <span class="section-eyebrow">// MEMORY ARCHIVE · 2008 — 2026</span>
+        <h2 class="section-title">THE PHOTO VAULT: <span class="accent">15 EPISODES</span></h2>
+        <p style="color:var(--text-muted); font-size:1rem;">
+          From diaper days to Level 18 adult status. A visual timeline of swagger, brotherly banter, and unforgettable moments.
+        </p>
+      </div>
+
+      <!-- Controls: Filters & View Switch -->
+      <div class="gallery-controls-bar">
+        <div class="gallery-filters">
+          <button class="filter-btn active" data-filter="all">All Memories (15)</button>
+          <button class="filter-btn" data-filter="childhood">Childhood</button>
+          <button class="filter-btn" data-filter="brothers">Brothers / Duo</button>
+          <button class="filter-btn" data-filter="attitude">Swag & Drip</button>
+        </div>
+
+        <div class="gallery-view-switch">
+          <button class="view-btn active" data-view="grid" title="Cyber Grid View">Cyber Grid</button>
+          <button class="view-btn" data-view="polaroid" title="3D Polaroid Carousel">3D Polaroid</button>
+        </div>
+      </div>
+
+      <!-- Grid View -->
+      <div class="gallery-grid" id="galleryGrid">
+        <!-- Rendered dynamically by app.js with photo1.jpg through photo15.jpg -->
+      </div>
+
+      <!-- Polaroid Carousel View -->
+      <div class="polaroid-carousel-wrap" id="polaroidWrap">
+        <div class="polaroid-stage" id="polaroidStage">
+          <!-- Rendered dynamically by app.js -->
+        </div>
+
+        <div class="polaroid-nav-bar">
+          <button class="cyber-btn cyber-btn-sm" id="polPrev"><span>← Previous</span></button>
+          <button class="cyber-btn cyber-btn-crimson cyber-btn-sm" id="polNext"><span>Next Memory →</span></button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 6: NAYAAB MINI-GAME (DHH Easter Egg)
+       ========================================================================== -->
+  <section class="game-section" id="game">
+    <div class="container">
+      <div class="game-card cyber-card">
+        <div class="hud-corner hud-tl"></div>
+        <div class="hud-corner hud-tr"></div>
+        <div class="hud-corner hud-bl"></div>
+        <div class="hud-corner hud-br"></div>
+
+        <div class="game-hud">
+          <div>MISSION: <span style="color:var(--neon-purple)">NAYAAB CATCH 2.0</span></div>
+          <div>SCORE: <span id="gameScore" class="score-glow">0</span></div>
+          <div>TIME: <span id="gameTime" class="timer-glow">30</span>s</div>
+        </div>
+
+        <div class="canvas-wrap">
+          <canvas id="nayaabGameCanvas"></canvas>
+
+          <div class="game-overlay-msg" id="gameOverlay">
+            <h3 id="gameOverlayTitle">NAYAAB // CATCH 'न'</h3>
+            <p id="gameOverlayDesc">
+              Move cyber paddle with mouse / touch or ← → arrow keys.<br>
+              Catch Hindi glyph <strong style="color:var(--neon-cyan)">न</strong> (+10 pts). Avoid glitch skulls <strong style="color:var(--neon-crimson)">☠</strong> (-20 pts).<br>
+              Show that 18-year-old Seedhe Maut reflex!
+            </p>
+            <button class="cyber-btn cyber-btn-crimson" id="startGameBtn">
+              <span>Start Mission</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       FULLSCREEN CYBER LIGHTBOX MODAL
+       ========================================================================== -->
+  <div class="lightbox-modal" id="lightboxModal">
+    <div class="lightbox-content">
+      <button class="lightbox-close" id="lightboxClose" title="Close Lightbox">✕</button>
+      <button class="lightbox-nav-arrow lightbox-prev" id="lightboxPrev" title="Previous">←</button>
+      <button class="lightbox-nav-arrow lightbox-next" id="lightboxNext" title="Next">→</button>
+
+      <div class="lightbox-image-box">
+        <img src="photo1.jpg" alt="Vault Memory" id="lightboxImg">
+      </div>
+
+      <div class="lightbox-details">
+        <div>
+          <span class="cyber-badge" id="lightboxTag">// CHILDHOOD</span>
+          <h3 id="lightboxTitle" style="font-family:var(--font-heading); font-size:1.4rem; color:#fff; margin-top:6px; letter-spacing:0.05em;">Memory Title</h3>
+          <p id="lightboxDesc" style="color:var(--text-muted); font-size:0.9rem; margin-top:2px;">Memory Description</p>
+        </div>
+
+        <span style="font-family:var(--font-mono); font-size:0.75rem; color:var(--neon-cyan);">ABHINAV RAIN // 18</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- FLOATING CELEBRATION BUTTON -->
+  <button class="floating-fx-btn" id="floatingFxBtn" title="Launch Birthday Confetti">
+    <span>🎉</span>
+    <span class="btn-label">Level 18 Celebration</span>
+  </button>
+
+  <!-- CYBER TOAST NOTIFICATION CONTAINER -->
+  <div class="cyber-toast" id="cyberToast"></div>
+
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+  <footer class="cyber-footer">
+    <div class="container footer-content">
+      <div class="footer-brand">ABHINAV <span>RAIN</span></div>
+      <div class="footer-sub">BORN 24.10.2008 · OFFICIALLY LEVEL 18 · TBS4L</div>
+      <p style="color:var(--text-dim); font-size:0.85rem; max-width:600px; line-height:1.6;">
+        Designed with brotherly love by <strong>Shailesh</strong>. May this 18th year bring you top ranks in JEE, unbounded happiness, and unmatched swagger. You will always be the best brother in the world.
+      </p>
+      <div style="margin-top:10px;">
+        <span class="cyber-badge sm">SEEDHE MAUT X DHH VIBE</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Core App Logic -->
+  <script src="app.js"></script>
+</body>
+</html>
